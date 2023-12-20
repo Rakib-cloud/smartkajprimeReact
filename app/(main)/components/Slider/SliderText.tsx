@@ -2,7 +2,6 @@
 import { useData } from "@/app/GlobalProvider/GlobalProvider";
 import NextButton from "@/app/components/Button/Button";
 import Paragraph from "@/app/components/Paragraph/Paragraph";
-
 import { Image} from 'primereact/image';
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -15,14 +14,12 @@ export default function SliderText() {
         <div className={"w-full lg:w-1/2"}>
             <h1 className="text-5xl font-medium mb-2 py-5 text-white">{data}</h1>
             <Paragraph text={"Join at SmartKaj now"} classes={"text-white"}/>
-
             {/* SEARCH BOX START FROM HERE  */}
             <div className="my-4 grid grid-cols-12 gap-4">
                 <div className="col-span-7">
                     <InputText
-
                         size="md"
-                        className="w-full bg-transparent"
+                        className="w-full"
                         placeholder="Find talented freelancer here"
                     />
                 </div>
@@ -32,7 +29,7 @@ export default function SliderText() {
                             redirect("/");
                         }}
                         title="Search"
-                        classes="w-full"
+                        classes=" flex justify-center"
                     />
                 </div>
             </div>

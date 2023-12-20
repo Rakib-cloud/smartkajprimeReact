@@ -19,7 +19,7 @@ export default function NavItems() {
       <ul className="block lg:flex items-center text-gray-700">
         <li className="group py-1 lg:py-4">
           <Link className="flex items-center" href={"#"}>
-            Business solutions{" "}
+             <span className={"whitespace-nowrap"}> Business solutions{" "}</span>
             <TfiAngleDown size={16} className="group-hover:rotate-180 ml-1" />
           </Link>
           <HoverItem />
@@ -36,7 +36,7 @@ export default function NavItems() {
         <li className="ml-0 lg:ml-6 py-1 lg:py-4">
           <Link
             href={"/seller"}
-            className={`${path === "/seller" && "text-secondary"}`}
+            className={`${path === "/seller" && "text-secondary"} whitespace-nowrap`}
           >
             Become a Seller
           </Link>
@@ -45,7 +45,10 @@ export default function NavItems() {
         <li className="ml-0 lg:ml-6  py-1 lg:py-4 ">
           <Button
             onClick={() => redirect("/")}
-            className="border bg-transparent border-secondary font-medium text-secondary hover:bg-secondary hover:text-white duration-200 transition-all"
+            size={"small"}
+            rounded
+            outlined
+            className={"whitespace-nowrap"}
           >
             Corporate Deal
           </Button>

@@ -4,35 +4,39 @@ import React, { useState } from "react";
 import { Dropdown } from 'primereact/dropdown';
 import { BsSearch } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
+import {SplitButton} from "primereact/splitbutton";
 
 export default function AuthNavigations({
   showSearchBar,
   setShowSearchBar,
 }: any) {
-  const items = [
-    {
-      key: "\u09F3 BDT",
-      label: "\u09F3 BDT",
-    },
-    {
-      key: "\u20B9 INR",
-      label: "\u20B9 INR",
-    },
-    {
-      key: "\u0024 USD",
-      label: "\u0024 USD",
-    },
-  ];
 
   const [active, setActive] = useState<string>("\u09F3 BDT");
-  const [selectedCity, setSelectedCity] = useState<any | null>(null);
-  const cities: any[] = [
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
+  const items = [
+    {
+      label: '\u09F3 BDT',
+      icon: 'pi pi-refresh',
+      command: () => {
+        setActive("\u09F3 BDT")
+      }
+    },
+    {
+      label: '\u20B9 INR',
+      icon: 'pi pi-times',
+      command: () => {
+        setActive("\u20B9 INR")
+      }
+    },
+    {
+      label: '\u0024 USD',
+      icon: 'pi pi-external-link',
+      command: () => {
+        setActive("\u0024 USD")
+      }
+    }
   ];
+
+
 
   return (
     <ul className="flex items-center gap-x-4">
@@ -89,8 +93,8 @@ export default function AuthNavigations({
             {/*    )}*/}
             {/*  </DropdownMenu>*/}
             {/*</Dropdown>*/}
-            <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name"
-                      showClear placeholder="Select a City" className="w-full md:w-14rem" />
+
+            <SplitButton label={active} icon="pi pi-plus" model={items} severity="secondary" text />
           </li>
         </>
       )}

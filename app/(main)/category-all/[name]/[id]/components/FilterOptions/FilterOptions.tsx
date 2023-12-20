@@ -1,26 +1,18 @@
 "use client";
 import NextButton from "@/app/components/Button/Button";
 import SmallText from "@/app/components/SmallText/SmallText";
-import { Input, Select, SelectItem } from "@nextui-org/react";
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { IoGridOutline } from "react-icons/io5";
+import {InputText} from "primereact/inputtext";
 export default function FilterOptions() {
-  const animals = [
-    {
-      label: "Web Design",
-      value: 1,
-    },
-  ];
   return (
     <div className="container">
       <div className="border-b py-6 mb-6">
         <div className="w-6/12 mx-auto grid grid-cols-12 gap-4">
           <div className="col-span-9">
-            <Input
-              radius="full"
-              size="md"
-              className="w-full bg-transparent"
+            <InputText
+              className=" text-white bg-transparent"
               placeholder="Find talented freelancer here"
             />
           </div>
@@ -33,27 +25,27 @@ export default function FilterOptions() {
         <div className="col-span-7">
           <div className="flex items-center">
             <SmallText classes="mr-4 whitespace-nowrap" text="Sort by" />
-            <Select size={"sm"} label="Category"  className="w-64 mr-4">
-              {animals.map((animal: any) => (
-                <SelectItem key={animal.value} value={animal.value}>
-                  {animal.label}
-                </SelectItem>
-              ))}
-            </Select>
-            <Select size={"sm"} label="Category" className="w-64 mr-4">
-              {animals.map((animal: any) => (
-                <SelectItem key={animal.value} value={animal.value}>
-                  {animal.label}
-                </SelectItem>
-              ))}
-            </Select>
-            <Select size={"sm"} label="Category" className="w-64 mr-4">
-              {animals.map((animal: any) => (
-                <SelectItem key={animal.value} value={animal.value}>
-                  {animal.label}
-                </SelectItem>
-              ))}
-            </Select>
+            {/*<Select size={"sm"} label="Category"  className="w-64 mr-4">*/}
+            {/*  {animals.map((animal: any) => (*/}
+            {/*    <SelectItem key={animal.value} value={animal.value}>*/}
+            {/*      {animal.label}*/}
+            {/*    </SelectItem>*/}
+            {/*  ))}*/}
+            {/*</Select>*/}
+            {/*<Select size={"sm"} label="Category" className="w-64 mr-4">*/}
+            {/*  {animals.map((animal: any) => (*/}
+            {/*    <SelectItem key={animal.value} value={animal.value}>*/}
+            {/*      {animal.label}*/}
+            {/*    </SelectItem>*/}
+            {/*  ))}*/}
+            {/*</Select>*/}
+            {/*<Select size={"sm"} label="Category" className="w-64 mr-4">*/}
+            {/*  {animals.map((animal: any) => (*/}
+            {/*    <SelectItem key={animal.value} value={animal.value}>*/}
+            {/*      {animal.label}*/}
+            {/*    </SelectItem>*/}
+            {/*  ))}*/}
+            {/*</Select>*/}
           </div>
         </div>
         <div className="col-span-5">
