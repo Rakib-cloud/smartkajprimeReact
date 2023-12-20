@@ -37,11 +37,13 @@ export default function PopularServices() {
         <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4">
           {Array.from({ length: 8 }).map((_, index) => (
             <div key={index}>
-              <Image
-                alt=""
-                src="https://i.ibb.co/q5s6ngz/service-Logo.png"
-                className="w-full"
-              />
+             <div className={"rounded-xl "}>
+                 <Image
+                     alt=""
+                     src="https://i.ibb.co/q5s6ngz/service-Logo.png"
+                     className="w-full h-full"
+                 />
+             </div>
               <Paragraph
                 text={
                   "I will create a modern minimalist logo design for your business"
@@ -53,6 +55,7 @@ export default function PopularServices() {
                   <Avatar
                       image="https://i.pravatar.cc/150?u=a042581f4e29026024d"
                     // size="sm"
+                      shape="circle"
                   />
                   <SmallText
                     text="Ovior Rahman"

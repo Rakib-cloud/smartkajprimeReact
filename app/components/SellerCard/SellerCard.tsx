@@ -9,24 +9,24 @@ import Paragraph from "../Paragraph/Paragraph";
 import { color } from "@/app/utils/info";
 import Link from "next/link";
 import HorizontalList from "../HorizontalList/HorizontalList";
+import {Avatar} from "primereact/avatar";
 
 export default function SellerCard({ data }: any) {
   return (
     <div className="bg-white p-4 rounded-xl border">
       <div className="flex items-center justify-between mb-4">
-        <Image
-          alt=""
-          src={data.profile}
-          width="1000"
-          className="w-10 h-10 object-cover"
+        <Avatar
+          image={data.profile}
+          size="large" shape="circle"
         />
           {/*href={`/seller/${data.name}`}*/}
         <Button
-            style={{ color: color.background.primary }}
-          >
-            <AiOutlinePlus className="mr-1"/>
-            View Profile
-          </Button>
+            label={"View Profile"}
+            size={"small"}
+            outlined
+            rounded
+          />
+
       </div>
       <Text title={data.name} />
       <ul className="flex items-center space-x-4 mb-4">
