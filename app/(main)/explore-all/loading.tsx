@@ -1,5 +1,6 @@
 import React from 'react';
-import {Card, Skeleton} from "@nextui-org/react";
+import {Skeleton} from "primereact/skeleton";
+// import {Card, Skeleton} from "@nextui-org/react";
 
 export default  function  Loading(){
     const skeletonArray = Array.from({ length: 3 }, (_, index) => index);
@@ -7,7 +8,7 @@ export default  function  Loading(){
     //loading card function
     const SkeletonCard = () => (
         <div className="">
-            <Card className="bg-white p-4 rounded-xl border">
+            <div className="bg-white p-4 rounded-xl border">
                 <div className="flex items-center justify-between mb-4">
                     <Skeleton className="w-10 h-10 bg-default-300 rounded-full" />
                     <Skeleton className="w-24 h-8 bg-default-300 rounded-full" />
@@ -34,7 +35,7 @@ export default  function  Loading(){
                     <Skeleton className="w-12 h-4 bg-default-300 rounded-full"></Skeleton>
                     <Skeleton className="w-12 h-4 bg-default-300 rounded-full"></Skeleton>
                 </div>
-            </Card>
+            </div>
         </div>
     );
     return (

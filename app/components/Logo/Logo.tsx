@@ -1,8 +1,9 @@
 "use client";
-import { Image } from "@nextui-org/react";
+
 import React from "react";
+import {Image} from "primereact/image";
 export function Logo(){
   return <div>
-    <Image alt="" width={50} src="/assets/fav.png" isBlurred/>
+    <Image alt="" width={"50"} src="/assets/fav.png"/>
   </div>
 }

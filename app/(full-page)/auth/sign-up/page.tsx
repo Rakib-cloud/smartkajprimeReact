@@ -6,7 +6,7 @@ import { Logo } from "@/app/components/Logo/Logo";
 import { loginSchema } from "@/app/schemas/loginSchema";
 import { loginData } from "@/app/utils/interfaces";
 import NextInput from "@/app/components/NextInput/NextInput";
-import { Spinner, useDisclosure } from "@nextui-org/react";
+// import { Spinner, useDisclosure } from "@nextui-org/react";
 import RegisterVerifyModal from "@/app/components/RegisterVerifyModal/RegisterVerifyModal";
 import Text from "@/app/components/Text/Text";
 import NextButton from "@/app/components/Button/Button";

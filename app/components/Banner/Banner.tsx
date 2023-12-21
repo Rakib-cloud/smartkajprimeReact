@@ -1,9 +1,9 @@
 "use client";
 import Paragraph from "@/app/components/Paragraph/Paragraph";
 import NextButton from "@/app/components/Button/Button";
-import {Image} from "@nextui-org/react";
 import React from "react";
 import Text from "@/app/components/Text/Text";
+import {Image} from "primereact/image";
 
 export  default function Banner({ data }: any) {
     const {title, description, button, func=null} = data
@@ -22,7 +22,7 @@ export  default function Banner({ data }: any) {
                         </div>
                     </div>
                     <div className='col-span-2'>
-                        <Image className='w-full' width={500} src='https://civi.uxper.co/wp-content/uploads/2023/01/image-home-03.webp' alt={"Banner"}/>
+                        <Image className='w-full' width={"500"} src='https://civi.uxper.co/wp-content/uploads/2023/01/image-home-03.webp' alt={"Banner"}/>
                     </div>
                 </div>
             </div>
