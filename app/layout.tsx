@@ -37,7 +37,7 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <GlobalProvider>
-          <PrimeReactProvider >
+          <PrimeReactProvider>
             <Layout>{children}</Layout>
           </PrimeReactProvider>
 
