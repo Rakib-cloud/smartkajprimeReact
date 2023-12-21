@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Skeleton, Link, Image } from "@nextui-org/react";
+import { Skeleton } from 'primereact/skeleton';
 import {color} from "@/app/utils/info";
+import Link from "next/link";
 
 export default  function  Loading(){
     const skeletonArray = Array.from({ length: 8 }, (_, index) => index);
